@@ -1,11 +1,11 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_movie, only: [:show, :edit, :update, :destroy]
+  before_action :set_movie, only: [:show, :edit, :update, :destroy, :upvote, :downvote]
 
   # GET /movies
   # GET /movies.json
   def index
-    @movies = Movie.all
+    @movies = Movie.all.order(:cached_votes_score => :desc)
   end
 
   # GET /movies/1
@@ -61,6 +61,19 @@ class MoviesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  #upvote_from_user
+  #Downvote_from_user
+  
+  def upvote
+    @movie.upvote_from current_user
+    redirect_to movies_path
+  end
+
+  def downvote
+    @movie.downvote_from current_user
+    redirect_to movies_path
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

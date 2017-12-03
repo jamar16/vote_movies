@@ -17,20 +17,20 @@
 
 	   <div class ='caption' style="text-align:center;"</div>
 	   	
-	<%= link_to like_movie_path(movie), class: "like", method: :put do %>
+	  <%= link_to like_movie_path(movie), class: "like", method: :put do %>
 	   	<button type= "button" class="btn btn-info" aria-label="left align">
-	   		<span class="glyphicon glyphicon-thumbs_up glyphicon-align-center" arai-hidden="true"></span>
-	   		<span class="badge"> <%= movie.get_upvote.size %></span> 
+	   		<span class="glyphicon glyphicon-thumbs-up glyphicon-align-center" arai-hidden="true"></span>
+	   		<span class="badge"> <%= movie.get_upvotes.size %></span> 
 	   </button>
-	   <% end %>
+	  <% end %>
 
 
-	<%= link_to unlike_movie_path(movie), class: "unlike", method: :put do %>
+	  <%= link_to unlike_movie_path(movie), class: "unlike", method: :put do %>
 	   	<button type= "button" class="btn btn-info" aria-label="left align">
-	   		<span class="glyphicon glyphicon-thumbs_down glyphicon-align-center" arai-hidden="true"></span>
-	   		<span class="badge"> <%= movie.get_downvote.size %></span> 
+	   		<span class="glyphicon glyphicon-thumbs-down glyphicon-align-center" arai-hidden="true"></span>
+	   		<span class="badge"> <%= movie.get_downvotes.size %></span> 
 	   	</button>
-	   	<% end %>
+	  <% end %>
 
 	   </div>
 

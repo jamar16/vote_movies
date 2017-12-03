@@ -1,3 +1,3 @@
-class Movie < ActiveRecord::base
-	act_as_votable
+class Movie < ActiveRecord::Base
+	acts_as_votable
 end

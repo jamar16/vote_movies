@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :movies do
   	member do
-  		put "like" => "movie#upvote"
-  		put "unlike" => "movie#downvote"
+  		put "like" => "movies#upvote"
+  		put "unlike" => "movies#downvote"
   	end
   end
   

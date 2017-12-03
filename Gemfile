@@ -31,7 +31,7 @@ gem 'bootstrap-sass' , '3.3.7'
 gem 'jquery-rails'
 
 #Acts asa votble
-gem 'acts_as_votable'
+gem 'acts_as_votable' , '0.11.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
